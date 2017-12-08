@@ -13,7 +13,7 @@
         android:layout_width="148dp"
         android:layout_height="151dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -21,13 +21,13 @@
         app:srcCompat="@drawable/homeicon" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="10"
         android:hint="Enter Username"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/password"
         android:layout_width="218dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -45,7 +45,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <TextView
         android:id="@+id/textView2"
@@ -66,11 +66,11 @@
         android:layout_height="50dp"
         android:background="@drawable/log"
         android:onClick="login"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
         android:id="@+id/textView"
@@ -83,10 +83,10 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox1"
         android:layout_width="281dp"
         android:layout_height="32dp"
         android:checked="true"
