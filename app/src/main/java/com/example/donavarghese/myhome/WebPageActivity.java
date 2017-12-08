@@ -74,6 +74,7 @@ public class WebPageActivity extends AppCompatActivity {
         dogsList.add("Bedroom 1::2");
         dogsList.add("Bedroom 2::3");
         dogsList.add("Bedroom 3::4");
+        dogsList.add("Main Menu::5");
 
         // convert to simple array
         popUpContents = new String[dogsList.size()];
@@ -172,7 +173,7 @@ public class WebPageActivity extends AppCompatActivity {
 
 public  void LivingRoom(){
     WebView myWebView = (WebView) findViewById(R.id.webView);
-
+    buttonShowDropDown.setText("Living Room");
     myWebView.getSettings().setJavaScriptEnabled(true);
 
     WebSettings webSettings = myWebView.getSettings();
@@ -192,7 +193,7 @@ public  void LivingRoom(){
 
     public  void Bedroom1(){
         WebView myWebView = (WebView) findViewById(R.id.webView);
-
+        buttonShowDropDown.setText("Bedroom 1");
         myWebView.getSettings().setJavaScriptEnabled(true);
 
         WebSettings webSettings = myWebView.getSettings();
@@ -211,7 +212,7 @@ public  void LivingRoom(){
 
     public  void Bedroom2(){
         WebView myWebView = (WebView) findViewById(R.id.webView);
-
+        buttonShowDropDown.setText("Bedroom 2");
         myWebView.getSettings().setJavaScriptEnabled(true);
 
         WebSettings webSettings = myWebView.getSettings();
@@ -230,7 +231,7 @@ public  void LivingRoom(){
 
     public  void Bedroom3(){
         WebView myWebView = (WebView) findViewById(R.id.webView);
-
+        buttonShowDropDown.setText("Bedroom 3");
         myWebView.getSettings().setJavaScriptEnabled(true);
 
         WebSettings webSettings = myWebView.getSettings();
@@ -246,4 +247,26 @@ public  void LivingRoom(){
 
         myWebView.loadUrl("http://"+ip+"/bedroom3.php");
     }
+
+
+
+    public  void MainMenu(){
+        WebView myWebView = (WebView) findViewById(R.id.webView);
+        buttonShowDropDown.setText("Main Menu");
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
+
+        final Activity activity = this;
+        myWebView.setWebViewClient(new WebViewClient() {
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        myWebView.loadUrl("http://"+ip);
+    }
+
 }

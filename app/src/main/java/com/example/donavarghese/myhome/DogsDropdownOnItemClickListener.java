@@ -37,26 +37,31 @@ public class DogsDropdownOnItemClickListener extends FragmentActivity implements
         int num = Integer.parseInt(selectedItemTag);
         switch(num){
             case 1:
-                Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
+                Toast.makeText(mContext, "Living room selected",
                         Toast.LENGTH_SHORT).show();
                 Activity activity = ((WebPageActivity) mContext);
                 mainActivity.LivingRoom();
                 break;
             case 2:
-                Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
+                Toast.makeText(mContext, "Bedroom 1 selected",
                         Toast.LENGTH_SHORT).show();
                 mainActivity.Bedroom1();
                break;
             case 3:
-                Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
+                Toast.makeText(mContext, "Bedroom 2 selected",
                         Toast.LENGTH_SHORT).show();
                 mainActivity.Bedroom2();
                 break;
             case 4:
-                Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
+                Toast.makeText(mContext, "Bedroom 3 selected",
                         Toast.LENGTH_SHORT).show();
                 mainActivity.Bedroom3();
                break;
+            case 5:
+                Toast.makeText(mContext, "Main Menu selected",
+                        Toast.LENGTH_SHORT).show();
+                mainActivity.MainMenu();
+                break;
             default:
                 Toast.makeText(mContext, "Something else " ,Toast.LENGTH_SHORT);
         }
