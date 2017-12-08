@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.donavarghese.myhome.RegistrationActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Account Registration"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Enter Full Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:hint="Enter Age"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText6"
+        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Enter Username"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText8"
+        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText9"
+        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+    <EditText
+        android:id="@+id/editText11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText10"
+        app:layout_constraintTop_toBottomOf="@+id/editText10" />
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Password hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText13"
+        app:layout_constraintStart_toStartOf="@+id/editText13" />
+
+    <EditText
+        android:id="@+id/editText13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Enter IP Address"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="36dp"
+        android:text="Create account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editText13" />
+</android.support.constraint.ConstraintLayout>
