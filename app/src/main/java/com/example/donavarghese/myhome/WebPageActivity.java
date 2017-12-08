@@ -167,7 +167,7 @@ public class WebPageActivity extends AppCompatActivity {
        startActivity(intent);
    }
 
-public  void newpage(){
+public  void LivingRoom(){
     WebView myWebView = (WebView) findViewById(R.id.webView);
 
     myWebView.getSettings().setJavaScriptEnabled(true);
@@ -186,4 +186,61 @@ public  void newpage(){
     myWebView.loadUrl("http://www.gmail.com");
 }
 
+
+    public  void Bedroom1(){
+        WebView myWebView = (WebView) findViewById(R.id.webView);
+
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
+
+        final Activity activity = this;
+        myWebView.setWebViewClient(new WebViewClient() {
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        myWebView.loadUrl("http://www.yahoo.com");
+    }
+
+    public  void Bedroom2(){
+        WebView myWebView = (WebView) findViewById(R.id.webView);
+
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
+
+        final Activity activity = this;
+        myWebView.setWebViewClient(new WebViewClient() {
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        myWebView.loadUrl("http://www.ebay.com");
+    }
+
+    public  void Bedroom3(){
+        WebView myWebView = (WebView) findViewById(R.id.webView);
+
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
+
+        final Activity activity = this;
+        myWebView.setWebViewClient(new WebViewClient() {
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        myWebView.loadUrl("http://www.amazon.com");
+    }
 }

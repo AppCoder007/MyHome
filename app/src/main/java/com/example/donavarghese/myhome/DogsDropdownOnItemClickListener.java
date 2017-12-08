@@ -40,19 +40,23 @@ public class DogsDropdownOnItemClickListener extends FragmentActivity implements
                 Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
                         Toast.LENGTH_SHORT).show();
                 Activity activity = ((WebPageActivity) mContext);
-                mainActivity.newpage();
+                mainActivity.LivingRoom();
+                break;
             case 2:
                 Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
                         Toast.LENGTH_SHORT).show();
-              //  break;
+                mainActivity.Bedroom1();
+               break;
             case 3:
                 Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
                         Toast.LENGTH_SHORT).show();
-             //   break;
+                mainActivity.Bedroom2();
+                break;
             case 4:
                 Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
                         Toast.LENGTH_SHORT).show();
-               // break;
+                mainActivity.Bedroom3();
+               break;
             default:
                 Toast.makeText(mContext, "Something else " ,Toast.LENGTH_SHORT);
         }
