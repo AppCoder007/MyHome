@@ -16,21 +16,25 @@ public class LoginActivity extends AppCompatActivity {
 
     public void createAccount(View view){
         Intent intent = new Intent(this, RegistrationActivity.class);
-       // EditText editText = (EditText) findViewById(R.id.editText);
-      //  String message = editText.getText().toString();
-     //   intent.putExtra(EXTRA_MESSAGE, message);
+
         startActivity(intent);
 
     }
 
     public void getPassword(View view){
         Intent intent = new Intent(this, GetPasswordActivity.class);
-       // EditText editText = (EditText) findViewById(R.id.editText);
-       // String message = editText.getText().toString();
-       // intent.putExtra(EXTRA_MESSAGE, message);
+
         startActivity(intent);
 
 
     }
+
+    public void login(View view){
+        // get info from login screen and check with database
+        Intent intent = new Intent(this, WebPageActivity.class);
+
+        startActivity(intent);
+    }
+
 
 }
