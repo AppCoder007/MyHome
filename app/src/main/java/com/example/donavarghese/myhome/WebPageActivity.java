@@ -167,6 +167,23 @@ public class WebPageActivity extends AppCompatActivity {
        startActivity(intent);
    }
 
+public  void newpage(){
+    WebView myWebView = (WebView) findViewById(R.id.webView);
 
+    myWebView.getSettings().setJavaScriptEnabled(true);
+
+    WebSettings webSettings = myWebView.getSettings();
+    webSettings.setUseWideViewPort(true);
+    webSettings.setLoadWithOverviewMode(true);
+
+    final Activity activity = this;
+    myWebView.setWebViewClient(new WebViewClient() {
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
+        }
+    });
+
+    myWebView.loadUrl("http://www.gmail.com");
+}
 
 }

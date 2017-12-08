@@ -1,9 +1,9 @@
 package com.example.donavarghese.myhome;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
@@ -39,16 +39,8 @@ public class DogsDropdownOnItemClickListener extends FragmentActivity implements
             case 1:
                 Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
                         Toast.LENGTH_SHORT).show();
-                WebView myWebView = (WebView) findViewById(R.id.webView);
-
-                myWebView.getSettings().setJavaScriptEnabled(true);
-
-
-                myWebView.loadUrl("http://www.google.com");
-
-               // mainActivity.seebbarr();
-             //
-               // break;
+                Activity activity = ((WebPageActivity) mContext);
+                mainActivity.newpage();
             case 2:
                 Toast.makeText(mContext, "Dog ID is: " + selectedItemTag,
                         Toast.LENGTH_SHORT).show();
