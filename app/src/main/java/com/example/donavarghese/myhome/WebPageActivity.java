@@ -28,10 +28,13 @@ public class WebPageActivity extends AppCompatActivity {
     PopupWindow popupWindowDogs;
     Button buttonShowDropDown;
     TextView textView;
+    String ip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_page);
+        Bundle bundle = getIntent().getExtras();
+       ip = bundle.getString("ipAddress");
         WebView myWebView = (WebView) findViewById(R.id.webView);
 
         myWebView.getSettings().setJavaScriptEnabled(true);
@@ -47,7 +50,7 @@ public class WebPageActivity extends AppCompatActivity {
             }
         });
 
-        myWebView.loadUrl("http://www.google.com");
+        myWebView.loadUrl("http://"+ip);
 // drop down list
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(
@@ -183,7 +186,7 @@ public  void LivingRoom(){
         }
     });
 
-    myWebView.loadUrl("http://www.gmail.com");
+    myWebView.loadUrl("http://"+ip+"/livingroom.php");
 }
 
 
@@ -203,7 +206,7 @@ public  void LivingRoom(){
             }
         });
 
-        myWebView.loadUrl("http://www.yahoo.com");
+        myWebView.loadUrl("http://"+ip+"/bedroom1.php");
     }
 
     public  void Bedroom2(){
@@ -222,7 +225,7 @@ public  void LivingRoom(){
             }
         });
 
-        myWebView.loadUrl("http://www.ebay.com");
+        myWebView.loadUrl("http://"+ip+"/bedroom2.php");
     }
 
     public  void Bedroom3(){
@@ -241,6 +244,6 @@ public  void LivingRoom(){
             }
         });
 
-        myWebView.loadUrl("http://www.amazon.com");
+        myWebView.loadUrl("http://"+ip+"/bedroom3.php");
     }
 }

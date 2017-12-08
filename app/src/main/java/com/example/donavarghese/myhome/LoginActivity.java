@@ -80,15 +80,17 @@ public class LoginActivity extends AppCompatActivity {
         String[] selectionArgs = new String[1];
         selectionArgs[0] = loginuser;
         String pw = null;
+        String ip = null;
         String str = RegistrationHelper.UserEntry.TABLE_NAME;
         Cursor cursor = this.mDatabaseHelper.getReadableDatabase().query(str, new String[]{"_id", RegistrationHelper.UserEntry.USER_FULLNAME, RegistrationHelper.UserEntry.USERAGE, RegistrationHelper.UserEntry.USEREMAIL, RegistrationHelper.UserEntry.PASSWORD, RegistrationHelper.UserEntry.PASSWORDHINT, RegistrationHelper.UserEntry.IPADDRESS}, "USERNAME = ?", selectionArgs, null, null, "FULLNAME DESC");
         List<String> getpassword = new ArrayList();
         while (cursor.moveToNext()) {
             pw = cursor.getString(cursor.getColumnIndexOrThrow(RegistrationHelper.UserEntry.PASSWORD));
+            ip = cursor.getString(cursor.getColumnIndexOrThrow(RegistrationHelper.UserEntry.IPADDRESS));
         }
         if (password.equals(pw)) {
             Intent intent = new Intent(this, WebPageActivity.class);
-
+            intent.putExtra("ipAddress", ip);
             startActivity(intent);
         } else {
             Toast.makeText(getApplicationContext(), "Username and password do not match", Toast.LENGTH_SHORT).show();
