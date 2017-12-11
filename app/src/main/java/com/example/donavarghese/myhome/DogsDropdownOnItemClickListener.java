@@ -62,6 +62,13 @@ public class DogsDropdownOnItemClickListener extends FragmentActivity implements
                         Toast.LENGTH_SHORT).show();
                 mainActivity.MainMenu();
                 break;
+            case 6:
+                Toast.makeText(mContext, "Remote Connection selected",
+                        Toast.LENGTH_SHORT).show();
+                mainActivity.RemoteConnection();
+                break;
+
+
             default:
                 Toast.makeText(mContext, "Something else " ,Toast.LENGTH_SHORT);
         }

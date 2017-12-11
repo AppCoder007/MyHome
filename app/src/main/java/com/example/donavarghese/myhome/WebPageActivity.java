@@ -75,6 +75,7 @@ public class WebPageActivity extends AppCompatActivity {
         dogsList.add("Bedroom 2::3");
         dogsList.add("Bedroom 3::4");
         dogsList.add("Main Menu::5");
+        dogsList.add("Remote\nConnection::6");
 
         // convert to simple array
         popUpContents = new String[dogsList.size()];
@@ -268,5 +269,25 @@ public  void LivingRoom(){
 
         myWebView.loadUrl("http://"+ip);
     }
+
+    public  void RemoteConnection(){
+        WebView myWebView = (WebView) findViewById(R.id.webView);
+        buttonShowDropDown.setText("Main Menu");
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
+
+        final Activity activity = this;
+        myWebView.setWebViewClient(new WebViewClient() {
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        myWebView.loadUrl("http://www.remot3.it/app/index.html");
+    }
+
 
 }
